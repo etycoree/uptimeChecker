@@ -5,7 +5,9 @@
   "main": "./server/index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start:server": "babel-node -- ./server/index.js"
+    "server": "babel-node -- ./server/index.js",
+    "client": "npm run start --prefix client",
+    "dev": "concurrently \"npm run server\" \"npm run client\""
   },
   "author": "",
   "license": "ISC",
@@ -19,6 +21,7 @@
     "axios": "^0.19.0",
     "bcrypt": "^3.0.6",
     "body-parser": "^1.19.0",
+    "concurrently": "^4.1.2",
     "connect-redis": "^4.0.2",
     "cors": "^2.8.5",
     "express": "^4.17.1",
