@@ -53,10 +53,10 @@ export default () => {
 					<Button type="submit">Change Password</Button>
 				</Form.Group>
 			</Form>
-			{isAlertShow && <Alert variant="success" transition="fade">
+			{isAlertShow && <Alert variant="success">
 				Password has been changed
 			</Alert>}
-			{!isPasswordMatch && <Alert variant="danger" transition="fade">
+			{!isPasswordMatch && <Alert variant="danger">
 				Password didn't match
 			</Alert>}
 		</>

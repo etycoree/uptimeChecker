@@ -4,7 +4,7 @@ import { useDispatch, useSelector } from 'react-redux'
 import { checkRequest, deleteCheck, checkEdit } from '../../actions/checkActions'
 import NewCheck from './newCheck'
 import CheckSettings from './checkSettings'
-import { Button, Table, Spinner } from 'react-bootstrap';
+import { Button, Table } from 'react-bootstrap';
 
 export default () => {
 	const

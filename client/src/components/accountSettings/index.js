@@ -8,14 +8,14 @@ import PasswordSettingsForm from './PasswordSettingsForm'
 export default () => (
 	<Container style={{ marginTop: "40px"}}>
 		<Link to="/">
-			<Image src="/img/left-arrow.svg" style={{ width: "250px", height: "40px"}}/>
+			<Image src="/img/left-arrow.svg" style={{height: "40px"}}/>
 		</Link>
 		<Row className="justify-content-center">
 			<CardDeck>
 				<Card>
 					<Card.Img variant="top" src="img/settings.svg" style={{ width: "300px", height: "200px", paddingTop: "10px" }} />
 					<Card.Body>
-						<Col md="auto">
+						<Col>
 							<AccountSettingsForm />
 						</Col>
 					</Card.Body>
@@ -23,7 +23,7 @@ export default () => (
 				<Card>
 					<Card.Img variant="top" src="img/password.svg" style={{ width: "300px", height: "200px", paddingTop: "10px" }} />
 					<Card.Body>
-						<Col md="auto">
+						<Col>
 							<PasswordSettingsForm />
 						</Col>
 					</Card.Body>

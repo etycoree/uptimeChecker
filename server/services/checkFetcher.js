@@ -51,7 +51,7 @@ async function makeRequest() {
 			console.log(`${check._id}: URL: ${check.URL} STATUS_CODE=${response.status}\n`)
 		}
 		catch (err) {
-			response = err.response ? err.response : { status: 500 }
+			response = err.response ? err.response : { message: `timeout of ${check.timeout}s exceeded` }
 			console.log(`${check._id}: URL: ${check.URL} ERROR: ${err}\n`)
 		}
 

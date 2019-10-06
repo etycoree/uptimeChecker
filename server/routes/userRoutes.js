@@ -90,14 +90,4 @@ export default app => {
 			return res.status(401).json({ errors: "Passwords don't match" })
 		}
 	})
-
-	app.delete('/api/delete_user', passport.isAuthenticated(), async (req, res) => {
-		try {
-			await User.findByIdAndRemove(req.user._id)
-			return res.status(200).redirect('/')
-		} catch (err) {
-			console.log(err)
-			return res.status(500).send()
-		}
-	})
 }
