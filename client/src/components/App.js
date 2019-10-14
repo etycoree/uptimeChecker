@@ -17,7 +17,10 @@ export default () => {
 		dispatch = useDispatch()
 
 	useEffect(() => {
-		setInterval(dispatch.bind(null, checkRequest()), 1000 * 30)
+		const
+			checkRequestInterval = setInterval(dispatch.bind(null, checkRequest()), 1000 * 30)
+
+		return () => clearInterval(checkRequestInterval)
 	}, [])
 
 	return (
